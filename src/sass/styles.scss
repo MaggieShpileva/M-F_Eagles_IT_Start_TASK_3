@@ -1,0 +1,216 @@
+body {
+  font-family: "Golos_Text", sans-serif;
+}
+
+.h2-golos-text {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  font-family: "Golos_Text", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.button-comments,
+.button-reply,
+.send-button {
+  border: 0;
+  border-radius: 5px;
+  padding: 6px 12px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  text-align: right;
+}
+
+.send-button {
+  width: 180px;
+  height: 35px;
+  background-color: #4cae4c;
+  margin-left: 120px;
+  margin-top: 20px;
+  position: relative;
+  &::before {
+    position: absolute;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    content: "";
+    top: 7px;
+    left: 11px;
+    background: url("../assets/images/telegram.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.comments {
+  min-width: 320px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 150px;
+  box-sizing: border-box;
+  min-height: 150px;
+  max-height: 300px;
+  margin-bottom: 30px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+  position: relative;
+
+  .newCommentName {
+    font-size: 25px;
+    margin-bottom: 6px;
+    width: calc(100% - 120px);
+  }
+
+  .newComment {
+    font-size: 19px;
+    margin-top: 10px;
+    width: calc(100% - 90px);
+  }
+
+  .newCommentDate {
+    font-weight: 400;
+    color: rgb(106, 104, 104);
+    margin: 0px;
+    width: calc(100% - 100px);
+  }
+
+  .div-button-like {
+    width: 100px;
+    display: flex;
+    align-items: center;
+
+    .button-like {
+      width: 50px;
+      height: 50px;
+      margin: 3px 10px 5px -7px;
+      background-image: url("/dist/assets/images/like.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .button-like.clicked {
+      background-image: url("/dist/assets/images/like-hover.png");
+    }
+
+    .count-like {
+      font-size: 13px;
+      color: rgb(106, 104, 104);
+    }
+  }
+
+  .div-button-delete {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .button-delete {
+      width: 50px;
+      height: 50px;
+      background-image: url("/dist/assets/images/icon-basket.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 0;
+      background-color: transparent;
+      margin: 0 auto;
+      cursor: pointer;
+      &:hover {
+        width: 55px;
+        height: 55px;
+        background-image: url("/dist/assets/images/icon-basket-hover.png");
+      }
+    }
+  }
+}
+
+.textarea-error,
+.input-error {
+  font-weight: 400;
+  font-size: 12px;
+  color: #f55123;
+  margin: 4px 0 0 0;
+  display: none;
+  position: relative;
+  width: 250px;
+  left: 120px;
+}
+
+main {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.comment-form {
+  width: 900px;
+  margin: 0 auto;
+
+  .form {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    .form-group {
+      margin-top: 10px;
+      vertical-align: middle;
+
+      .label {
+        position: relative;
+        top: 7px;
+        float: left;
+        width: 120px;
+      }
+    }
+
+    .name-div {
+      height: 55px;
+
+      .input-name {
+        width: 300px;
+        height: 30px;
+      }
+    }
+
+    .textarea-div {
+      height: 100px;
+      position: relative;
+
+      .lengthComment {
+        font-size: 10px;
+        position: absolute;
+        right: 38px;
+        bottom: 16px;
+      }
+
+      .textarea-comment {
+        resize: none;
+        height: 70px;
+        width: 700px;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <main><div class="comments">
+        <h2 class="newCommentName">Maggie Shpileva</h2>
+        <p class="newComment">Beautiful work</p>
+        <p class = "newCommentDate"></p>
+        <div class="div-button-like">
+          <button class = "button-like">  </button>
+        </div>
+
+        <div class= "div-button-delete">
+          <button class = "button-delete" id="button-delete"> </delete>
+        <div>
+      </div>
+    </main>
+    <div class="comment-form">
+      <h2 class="h2-golos-text">Leave a comment</h2>
+      <form name="comment" class="form">
+        <div class="form-group name-div">
+          <label for="userName" class="label">Name</label>
+          <input type="text" name="userName" id="" class="input-name" />
+          <p class="input-error"></p>
+        </div>
+        <div class="form-group textarea-div">
+          <label for="comment" class="label">Comment</label>
+          <textarea
+            name="comment"
+            id=""
+            cols="30"
+            rows="10"
+            class="textarea-comment"
+            maxlength="210"
+          ></textarea>
+          <p class="lengthComment"></p>
+          <p class="textarea-error"></p>
+        </div>
+        <div class="form-group data-div">
+          <label for="date" class="label">Date</label>
+          <input type="date" id="date" name="date" />
+        </div>
+
+        <!-- date -->
+        <button class="send-button" id="send-button" type="reset">
+          Submit comment
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
